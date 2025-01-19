@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>Gallery</title>
+  </head>
+  <body>
+
+    <body>
+        <h1>Gallery</h1>
+        <div class="gallery">
+            <img id="gallery-image" src="assets/img/1.avif" alt="Gallery Image">
+            <div class="buttons">
+                <button id="prev-btn">Back</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+    
+        <script>
+           
+            function logMessage() {
+                console.log('Я учу JavaScript!');
+            }
+    
+            logMessage();
+    
+            
+            const images = [
+                'assets/img/1.avif',
+                'assets/img/2.avif',
+                
+            ];
+    
+            let currentIndex = 0;
+            const galleryImage = document.getElementById('gallery-image');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+    
+          
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                galleryImage.src = images[currentIndex];
+            });
+    
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                galleryImage.src = images[currentIndex];
+            });
+        </script>
+    </body>
+    </html>
+  </body>
+</html>

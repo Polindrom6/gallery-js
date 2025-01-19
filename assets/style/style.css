@@ -1,0 +1,30 @@
+body {
+  background-color: #e2ddddcb;
+  font-family: Arial, sans-serif;
+  color: #ac8787;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.gallery {
+  margin: 20px auto;
+  width: 300px;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.buttons {
+  margin-top: 10px;
+}
+.buttons button {
+  background-color: #ac8787;
+  border: none;
+  color: rgb(194, 186, 186);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
